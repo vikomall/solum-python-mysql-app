@@ -9,7 +9,7 @@ ENV = Environment(loader=FileSystemLoader('templates'))
 
 def get_params():
     params = {'key': os.environ.get('key', ''),
-              'username': os.environ.get('username', ''),
+              'user': os.environ.get('user', ''),
               'password': os.environ.get('password', '')}
     return params
 
@@ -22,6 +22,6 @@ class Root(object):
         return tmpl.render(params)
 
 cherrypy.config.update({'server.socket_host': '0.0.0.0',
-                        'server.socket_port': int(os.environ.get('PORT', '5088'))})
+                        'server.socket_port': int(os.environ.get('PORT', '5000'))})
 
 cherrypy.quickstart(Root())
