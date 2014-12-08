@@ -1,1 +1,1 @@
-web: main.sh
+web: sh main.sh
