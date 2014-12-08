@@ -1,10 +1,27 @@
-import cherrypy
 import os
-class HelloWorld(object):
-    def index(self):
-        return "This is the python demo for Arbor"
-    index.exposed = True
 
-cherrypy.config.update({'server.socket_host': '0.0.0.0',})
-cherrypy.config.update({'server.socket_port': int(os.environ.get('PORT', '5000')),})
-cherrypy.quickstart(HelloWorld())
+import cherrypy
+from jinja2 import Environment, FileSystemLoader
+
+
+ENV = Environment(loader=FileSystemLoader('templates'))
+
+
+def get_params():
+    params = {'key': os.environ.get('key', ''),
+              'username': os.environ.get('username', ''),
+              'password': os.environ.get('password', '')}
+    return params
+
+
+class Root(object):
+    @cherrypy.expose
+    def index(self):
+        tmpl = ENV.get_template('index.html')
+        params = get_params()
+        return tmpl.render(params)
+
+cherrypy.config.update({'server.socket_host': '0.0.0.0',
+                        'server.socket_port': int(os.environ.get('PORT', '5088'))})
+
+cherrypy.quickstart(Root())
