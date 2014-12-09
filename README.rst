@@ -37,11 +37,11 @@ Step 2: Test the App Locally
 	python app.py
 	
 
-2. You should be able to navigate in your browser to `http://localhost:5000' <http://localhost:5000/>`_ to view your hello world application. You'll notice for CherryPy the one unique portion is to attempt to read the port variable if it exists, this is to enable Heroku to know which port to listen to. 
+2. You should be able to navigate in your browser to `http://localhost:5000' <http://localhost:5000/>`_ to view your hello world application. You'll notice for CherryPy the one unique portion is to attempt to read the port variable if it exists, this is to enable Solum to know which port to listen to. 
 
 3. Press `CTRL-C` to stop the process.
 
-You are now ready to deploy this simple Python/CherryPy web app to Heroku.
+You are now ready to deploy this simple Python/CherryPy web app to Solum.
 
 Step 3: Deploy the Web App to Solum
 ------------------------------------
