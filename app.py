@@ -12,7 +12,7 @@ def get_params():
     params = {'dbname': os.environ.get('dbname', ''),
               'user': os.environ.get('user', ''),
               'password': os.environ.get('password', ''),
-              'dbhost': os.environ.get('dbhost', ''}
+              'dbhost': os.environ.get('dbhost', '')}
     return params
 
 
@@ -32,10 +32,12 @@ class Root(object):
           cursor.execute(sql)
           results = cursor.fetchall()
           name = random.choice(results)
+          names = {}
+          names['name'] = name
         except:
           print "Error: unable to fecth data"
 
-        return tmpl.render(name)
+        return tmpl.render(names)
 
 cherrypy.config.update({'server.socket_host': '0.0.0.0',
                         'server.socket_port': int(os.environ.get('PORT', '5000'))})
