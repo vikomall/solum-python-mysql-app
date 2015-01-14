@@ -1,4 +1,4 @@
-Hello World with CherryPy
+Hello World with CherryPy + MySQL
 ======================
 
 In this tutorial, you will create a web app and deploy it to Solum. You will use a CherryPy create the app.
