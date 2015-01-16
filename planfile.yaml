@@ -7,5 +7,5 @@ artifacts:
   content:
     href: https://github.com/murali44/cherrypy-helloworld.git
   language_pack: auto
-  unittest_cmd: ./unit_tests.sh
+  unittest_cmd: pip install -r test-requirements.txt; pep8 app.py
   run_cmd: python app.py
