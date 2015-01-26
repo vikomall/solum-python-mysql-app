@@ -35,7 +35,7 @@ class Root(object):
             names = {}
             names['name'] = name
         except:
-          print "Error: unable to fecth data"
+            print "Error: unable to fecth data"
 
         return tmpl.render(names)
 
