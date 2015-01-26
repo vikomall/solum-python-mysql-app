@@ -29,17 +29,18 @@ class Root(object):
         sql = "SELECT * FROM people"
 
         try:
-          cursor.execute(sql)
-          results = cursor.fetchall()
-          name = random.choice(results)
-          names = {}
-          names['name'] = name
+            cursor.execute(sql)
+            results = cursor.fetchall()
+            name = random.choice(results)
+            names = {}
+            names['name'] = name
         except:
           print "Error: unable to fecth data"
 
         return tmpl.render(names)
 
 cherrypy.config.update({'server.socket_host': '0.0.0.0',
-                        'server.socket_port': int(os.environ.get('PORT', '5000'))})
+                        'server.socket_port': int(os.environ.get('PORT',
+                                                                 '5000'))})
 
 cherrypy.quickstart(Root())
