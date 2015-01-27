@@ -1,6 +1,6 @@
 version: 1
 name: cherrypy
-description: python web app
+description: test python web app
 artifacts:
 - name: web
   artifact_type: heroku
