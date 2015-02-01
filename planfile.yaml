@@ -6,6 +6,6 @@ artifacts:
   artifact_type: heroku
   content:
     href: https://github.com/murali44/cherrypy-helloworld.git
-  language_pack: a84cbb07-d576-4fc2-8b29-d1a78116354e
+  language_pack: 880ad581-a500-4722-8662-7b3f5f31e904
   unittest_cmd: pip install -r test-requirements.txt; pep8 app.py
   run_cmd: /usr/bin/python app.py
