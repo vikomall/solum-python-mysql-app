@@ -8,4 +8,4 @@ artifacts:
     href: https://github.com/murali44/cherrypy-helloworld.git
   language_pack: 7ebcb36e-5be5-4f53-aabc-5cab37880d6b
   unittest_cmd: pip install -r test-requirements.txt; pep8 app.py
-  run_cmd: /usr/bin/python app.py
+  run_cmd: ./main.sh
