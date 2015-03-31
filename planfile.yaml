@@ -3,9 +3,8 @@ name: cherrypy
 description: test python web app
 artifacts:
 - name: web
-  artifact_type: heroku
   content:
-    href: https://github.com/murali44/cherrypy-helloworld.git
-  language_pack: 7ebcb36e-5be5-4f53-aabc-5cab37880d6b
+    href: https://github.com/rackspace-solum-samples/solum-python-mysql-app
+  language_pack: python2.7
   unittest_cmd: pip install -r test-requirements.txt; pep8 app.py
   run_cmd: ./main.sh
