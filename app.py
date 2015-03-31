@@ -41,6 +41,6 @@ class Root(object):
 
 cherrypy.config.update({'server.socket_host': '0.0.0.0',
                         'server.socket_port': int(os.environ.get('PORT',
-                                                                 '8055'))})
+                                                                 '80'))})
 
 cherrypy.quickstart(Root())
