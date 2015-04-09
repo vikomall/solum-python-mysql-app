@@ -5,6 +5,6 @@ artifacts:
 - name: web
   content:
     href: https://github.com/rackspace-solum-samples/solum-python-mysql-app
-  language_pack: python2.7
+  language_pack: python27
   unittest_cmd: pip install -r test-requirements.txt; pep8 app.py
   run_cmd: ./main.sh
